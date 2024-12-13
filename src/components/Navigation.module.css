@@ -1,0 +1,25 @@
+.navigationList {
+  display: flex;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: azure;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.navigationLink {
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navigationLink:active, .navigationLink:hover {
+  text-decoration: underline;
+}

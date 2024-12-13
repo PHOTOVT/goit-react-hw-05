@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import css from './MovieList.module.css'
 
 const MovieList = ({ movies }) => {
   if (!movies || movies.length === 0) {
@@ -9,17 +11,7 @@ const MovieList = ({ movies }) => {
     <ul>
       {movies.map((movie) => (
         <li key={movie.id}>
-          <img
-            src={
-              movie.poster_path
-                ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
-                : "https://via.placeholder.com/200x300?text=No+Image"
-            }
-            alt={movie.title}
-          />
-          <h3>{movie.title}</h3>
-          <p>Release Date: {movie.release_date}</p>
-          <p>Rating: {movie.vote_average} / 10</p>
+          <Link className={css.movieListLink} to={`/movies/${movie.id}`}>{movie.title}</Link>
         </li>
       ))}
     </ul>

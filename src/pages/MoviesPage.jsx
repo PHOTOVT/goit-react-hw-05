@@ -6,22 +6,22 @@ const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
 
-  const handleSearch = (event) => {
+  const handleSearch = async (event) => {
     event.preventDefault();
-    const url = `https://api.themoviedb.org/3/search/movie?query=${query}`;
-
+    
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
     const options = {
       headers: {
         Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWNmNjI2ODk3YzA5OTIzZmM1ZTA4MmJiNWMwNjJjNCIsIm5iZiI6MTczMzgyNTcyMy4wNTMsInN1YiI6IjY3NTgxNGJiODEzOGJlNTVkOWExNDI2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ptZK7IUP4dUYhfQQlevY0DnfyTfy_D2rsAHo7Vrov4Y",
       },
     };
 
-    axios
-      .get(url, options)
-      .then((response) => {
-        setMovies(response.data.results);
-      })
-      .catch((err) => console.error('Error fetching movies:', err));
+    try {
+      const response = await axios.get(url, options);
+      setMovies(response.data.results);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+    }
   };
 
   return (
@@ -35,7 +35,6 @@ const MoviesPage = () => {
         />
         <button type="submit">Search</button>
       </form>
-      <MovieList movies={movies} />
     </div>
   );
 };

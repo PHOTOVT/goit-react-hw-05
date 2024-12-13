@@ -14,7 +14,7 @@ const HomePage = () => {
         const url = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
         const options = {
           headers: {
-            Authorization: "Bearer YOUR_ACCESS_TOKEN",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMWNmNjI2ODk3YzA5OTIzZmM1ZTA4MmJiNWMwNjJjNCIsIm5iZiI6MTczMzgyNTcyMy4wNTMsInN1YiI6IjY3NTgxNGJiODEzOGJlNTVkOWExNDI2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ptZK7IUP4dUYhfQQlevY0DnfyTfy_D2rsAHo7Vrov4Y",
           },
         };
         const response = await axios.get(url, options);
@@ -37,7 +37,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <MoviesPage />
+      <h1>Trending today: </h1>
       <MovieList movies={movies} />
     </div>
   );

@@ -1,0 +1,7 @@
+.movieListLink {
+color: azure;
+}
+
+.movieListLink:active, .movieListLink:hover {
+text-decoration: underline;
+}

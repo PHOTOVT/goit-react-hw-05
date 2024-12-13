@@ -9,24 +9,38 @@ const MovieDetailsPage = () => {
   const backLink = location.state?.from || '/movies';
 
   useEffect(() => {
-    fetch(`https://api.example.com/movies/${movieId}`)
-      .then((response) => response.json())
-      .then((data) => setMovie(data));
+    const fetchMovieDetails = async () => {
+      try {
+        const url = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;
+        const options = {
+          headers: {
+            Authorization: "Bearer YOUR_ACCESS_TOKEN",
+          },
+        };
+        const response = await axios.get(url, options);
+        setMovie(response.data);
+      } catch (err) {
+        setError("Failed to load movie details");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMovieDetails();
   }, [movieId]);
 
-  if (!movie) return <p>Loading...</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div>
-      <button onClick={() => navigate(backLink)}>Go back</button>
-      <h1>{movie.title}</h1>
-      <p>{movie.description}</p>
-      <nav>
-        <Link to="cast" state={{ from: backLink }}>Cast</Link>
-        {' | '}
-        <Link to="reviews" state={{ from: backLink }}>Reviews</Link>
-      </nav>
-      <Outlet />
+      <h2>{movie.title}</h2>
+      <p>{movie.overview}</p>
+      <p>Rating: {movie.vote_average}</p>
+      <img
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        alt={movie.title}
+      />
     </div>
   );
 };
