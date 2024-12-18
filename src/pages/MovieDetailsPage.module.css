@@ -1,0 +1,11 @@
+.goBackButton,
+.additionalInfo {
+  color: azure;
+}
+
+.goBackButton:active,
+.goBackButton:hover,
+.additionalInfo:active,
+.additionalInfo:hover {
+  text-decoration: underline;
+}

@@ -20,6 +20,7 @@
   font-weight: bold;
 }
 
-.navigationLink:active, .navigationLink:hover {
+.navigationLink:active,
+.navigationLink:hover {
   text-decoration: underline;
 }

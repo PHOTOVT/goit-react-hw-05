@@ -1,7 +1,8 @@
 .movieListLink {
-color: azure;
+  color: azure;
 }
 
-.movieListLink:active, .movieListLink:hover {
-text-decoration: underline;
+.movieListLink:active,
+.movieListLink:hover {
+  text-decoration: underline;
 }
