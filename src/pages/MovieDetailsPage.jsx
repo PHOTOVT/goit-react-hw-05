@@ -76,7 +76,9 @@ const MovieDetailsPage = () => {
       ) : (
         <p>Loading...</p>
       )}
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
