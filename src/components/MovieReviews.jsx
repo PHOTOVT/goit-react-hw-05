@@ -35,7 +35,7 @@ const MovieReviews = () => {
           {reviews.map((review) => (
             <li key={review.id}>
               <p>
-                <strong>{review.author}</strong>: {review.content}
+                <h4>{review.author}</h4>: {review.content}
               </p>
             </li>
           ))}

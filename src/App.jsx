@@ -1,12 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import MoviesPage from './pages/MoviesPage';
-import MovieDetailsPage from './pages/MovieDetailsPage';
-import MovieCast from './components/MovieCast';
-import MovieReviews from './components/MovieReviews';
-import NotFoundPage from './pages/NotFoundPage';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MoviesPage from "./pages/MoviesPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage";
+import MovieCast from "./components/MovieCast";
+import MovieReviews from "./components/MovieReviews";
+import NotFoundPage from "./pages/NotFoundPage";
 import Navigation from "./components/Navigation";
-import './App.css'
+import "./App.css";
 
 const App = () => {
   return (

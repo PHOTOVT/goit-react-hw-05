@@ -17,7 +17,7 @@
 
 .searchButton {
   font-size: 16px;
-  background-color:darksalmon;
+  background-color: darksalmon;
   color: azure;
   transition: background-color 0.3s;
 }

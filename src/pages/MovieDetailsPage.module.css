@@ -1,11 +1,31 @@
-.goBackButton,
-.additionalInfo {
+.goBackButton {
+  display: inline-block;
+  padding: 10px 20px;
   color: azure;
+  background-color: darksalmon;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .goBackButton:active,
+.additionalInfo:active {
+  background: transparent;
+  border: 2px solid darksalmon;
+}
+
 .goBackButton:hover,
-.additionalInfo:active,
 .additionalInfo:hover {
-  text-decoration: underline;
+  background: transparent;
+  border: 2px solid darksalmon;
+}
+
+.additionalInfo {
+  color: azure;
 }
