@@ -14,18 +14,15 @@
   transition: background-color 0.3s ease;
 }
 
-.goBackButton:active,
-.additionalInfo:active {
-  background: transparent;
-  border: 2px solid darksalmon;
-}
-
-.goBackButton:hover,
-.additionalInfo:hover {
+.goBackButton:active, .goBackButton:hover {
   background: transparent;
   border: 2px solid darksalmon;
 }
 
 .additionalInfo {
   color: azure;
+}
+
+.additionalInfo:active, .additionalInfo:hover {
+  text-decoration: underline;
 }
