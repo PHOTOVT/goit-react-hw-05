@@ -22,10 +22,11 @@ a {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-  padding-top: 60px;
+  padding: 100px 30px 30px 30px;
 }
 
 h1 {
