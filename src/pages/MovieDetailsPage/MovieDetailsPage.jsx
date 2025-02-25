@@ -2,7 +2,7 @@ import React, { useEffect, useState, Suspense } from "react";
 import { Link, useParams, useLocation, Outlet } from "react-router-dom";
 import axios from "axios";
 import css from "./MovieDetailsPage.module.css";
-import Loader from "../components/Loader/Loader";
+import Loader from "../../components/Loader/Loader"
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
