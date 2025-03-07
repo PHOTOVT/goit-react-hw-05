@@ -5,9 +5,8 @@
   font-size: 25px;
 
   color-scheme: light dark;
-  color: azure;
-  background-color: darkblue;
-
+  color: whitesmoke;
+  background-color: darkslateblue;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,7 +25,6 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-  padding: 100px 30px 30px 30px;
 }
 
 h1 {
@@ -34,23 +32,13 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+button, input {
   border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {

@@ -2,14 +2,14 @@ import React, { useEffect, useState, Suspense } from "react";
 import { Link, useParams, useLocation, Outlet } from "react-router-dom";
 import axios from "axios";
 import css from "./MovieDetailsPage.module.css";
-import Loader from "../../components/Loader/Loader"
+import Loader from "../../components/Loader/Loader";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const location = useLocation();
-  const backLink = location.state?.from || "/";
+  const backLink = location.state?.from || "/movies";
 
   useEffect(() => {
     const fetchMovieDetails = async () => {

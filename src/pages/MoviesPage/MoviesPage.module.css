@@ -1,28 +1,35 @@
 .searchForm {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 125px;
 }
 
 .searchInput {
   padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid azure;
+  font-size: 20px;
+  border: 2px solid whitesmoke;
   background: transparent;
   border-radius: 5px;
   outline: none;
   width: 250px;
 }
 
+input::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+
 .searchButton {
-  font-size: 16px;
-  background-color: darksalmon;
-  color: azure;
+  border: 2px solid transparent;
+  font-size: 20px;
+  background-color: rosybrown;
+  color: whitesmoke;
   transition: background-color 0.3s;
 }
 
 .searchButton:hover {
   background-color: transparent;
-  border: 2px solid darksalmon;
+  border: 2px solid rosybrown;
 }

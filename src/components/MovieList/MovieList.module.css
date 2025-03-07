@@ -1,8 +1,8 @@
 .movieListLink {
-  color: azure;
+  color: whitesmoke;
 }
 
 .movieListLink:active,
 .movieListLink:hover {
-  text-decoration: underline;
+  color: gray;
 }

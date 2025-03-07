@@ -1,8 +1,8 @@
 .goBackButton {
   display: inline-block;
   padding: 10px 20px;
-  color: azure;
-  background-color: darksalmon;
+  color: whitesmoke;
+  background-color: rosybrown;
   text-decoration: none;
   border: none;
   border-radius: 4px;
@@ -17,11 +17,11 @@
 .goBackButton:active,
 .goBackButton:hover {
   background: transparent;
-  border: 2px solid darksalmon;
+  border: 2px solid rosybrown;
 }
 
 .additionalInfo {
-  color: azure;
+  color: whitesmoke;
 }
 
 .additionalInfo:active,

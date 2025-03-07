@@ -16,11 +16,11 @@
 .navigationLink {
   margin-right: 15px;
   text-decoration: none;
-  color: black;
+  color: darkslateblue;
   font-weight: bold;
 }
 
 .navigationLink:active,
 .navigationLink:hover {
-  text-decoration: underline;
+  color: gray;
 }
