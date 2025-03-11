@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState, Suspense, useRef } from "react";
 import { Link, useParams, useLocation, Outlet } from "react-router-dom";
 import axios from "axios";
 import Loader from "../../components/Loader/Loader";
@@ -9,7 +9,7 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const location = useLocation();
-  const backLink = location.state?.from || "/movies";
+  const backLinkRef = useRef(location.state?.from || "/movies");
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -34,7 +34,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link className={css.goBackButton} to={backLink}>
+      <Link className={css.goBackButton} to={backLinkRef.current}>
         Go back
       </Link>
 
@@ -58,7 +58,7 @@ const MovieDetailsPage = () => {
               <Link
                 className={css.additionalInfo}
                 to="cast"
-                state={{ from: backLink }}
+                state={{ from: backLinkRef.current }}
               >
                 Cast
               </Link>
@@ -67,7 +67,7 @@ const MovieDetailsPage = () => {
               <Link
                 className={css.additionalInfo}
                 to="reviews"
-                state={{ from: backLink }}
+                state={{ from: backLinkRef.current }}
               >
                 Reviews
               </Link>
